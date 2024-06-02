@@ -42,9 +42,7 @@ function KareninAlani(kenaruzunlugu) {
 
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
-function KareninAlani(kenaruzunlugu) {
-  return kenaruzunlugu * kenaruzunlugu;
-}
+
 
 console.log(KareninAlani(10));
 
