@@ -56,11 +56,13 @@ console.log(KareninAlani(10));
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
+
+
+/* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 function CemberinCevresi(yaricap) {
   return 2 * pi * yaricap;
 }
 
-/* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 console.log(CemberinCevresi(5));
 /* 	GÖREV 2:  
 - CemberinAlani fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
@@ -122,6 +124,7 @@ console.log(enbuyuk);
 
 
 // 3b çözümü:
+
 ucetambolunenler = [];
 
 sayilar.forEach((sayi) => {
@@ -132,17 +135,14 @@ sayilar.forEach((sayi) => {
 
 console.log(ucetambolunenler);
 
-/* kodlar buraya */
 
 // 3c çözümü:
 
-/* kodlar buraya */
 ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, yeni) => toplam + yeni, 0)
 
 console.log(ucebolunenlerintoplami);
 // 3d çözümü
 
-/* kodlar buraya */
 besyuzdenkucuksayilar = [];
 
 
@@ -154,13 +154,33 @@ besyuzdenkucuksayilar = sayilar.filter(kucukMu);
 console.log(besyuzdenkucuksayilar);
 // 3e çözümü
 
-/* kodlar buraya */
 siralisayilar = besyuzdenkucuksayilar.sort((a,b) => a-b);
 
 console.log(siralisayilar);
 // 3f çözümü
 
-/* kodlar buraya */
+tekraredensayilar = [];
+const sayiTekrarlari = {};
+
+
+for (let i = 0; i < sayilar.length; i++) {
+  const sayi = sayilar[i];
+  if (sayiTekrarlari[sayi]) {
+    sayiTekrarlari[sayi]++;
+  } else {
+    sayiTekrarlari[sayi] = 1;
+  }
+}
+
+for (let sayi in sayiTekrarlari) {
+  if (sayiTekrarlari[sayi] > 1) {
+    tekraredensayilar.push(
+      `${sayi} sayısı ${sayiTekrarlari[sayi]} kere tekrar edilmiştir.`
+    );
+  }
+}
+
+console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
